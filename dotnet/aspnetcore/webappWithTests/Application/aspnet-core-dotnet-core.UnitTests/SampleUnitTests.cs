@@ -27,7 +27,9 @@ namespace aspnet_core_dotnet_core.UnitTests
         public void ContactPageTest()
         {
             var controller = new HomeController();
+#pragma warning disable IDE0059 // Value assigned to symbol is never used
             IActionResult result = controller.Contact();
+#pragma warning restore IDE0059 // Value assigned to symbol is never used
             Assert.AreEqual("Your contact page.", controller.ViewData["Message"]);
         }
     }
